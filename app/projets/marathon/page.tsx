@@ -1,47 +1,23 @@
 import React from "react";
 import CompetenceBlock from "@/app/components/CompetenceBlock";
+import DetailsCard, {Details} from "@/app/components/DetailsBlock";
 
-interface Competence {
-    categorie: string;
-    elements: { nom: string; niveau: number }[];
-}
 
-const competences: Competence[] = [
+
+const details: Details =
     {
-        categorie: "Langage",
-        elements: [
-            { nom: "HTML", niveau: 90 },
-            { nom: "PHP", niveau: 80 },
-            { nom: "Javascript", niveau: 80 },
-            { nom: "Typescript", niveau: 80 },
-            { nom: "CSS", niveau: 75 },
-            { nom: "Java", niveau: 75 },
-            { nom: "Python", niveau: 70 },
-            { nom: "C++", niveau: 60 },
-        ],
-    },
-    {
-        categorie: "Framework",
-        elements: [
-            { nom: "Laravel", niveau: 85 },
-            { nom: "NextJS", niveau: 85 },
-            { nom: "Spring", niveau: 80 },
-            { nom: "Flask", niveau: 65 },
-            { nom: "Angular", niveau: 60 },
-        ],
-    },
-];
+        title: "Marathon du Web",
+        presentation: "Dans le cadre de notre programme de BUT, nous avons eu l’opportunité de participer à un hackathon intense de 36 heures sur le thème \"Construire votre propre histoire\". L'objectif de cet événement était de concevoir une application web interactive où les utilisateurs peuvent influencer le déroulement de l’histoire en fonction des choix qu'ils font, créant ainsi une expérience unique pour chaque lecture.",
+        details: "Ce projet a permis de mettre en pratique nos compétences acquises tout au long de notre formation. En effet, chaque équipe était composée d’étudiants issus des départements BUT Informatique et BUT Métiers du Multimédia et de l'Internet (MMI), favorisant ainsi une collaboration interdisciplinaire. D’un côté, les étudiants en informatique se sont concentrés sur la partie back-end et le développement de la logique de l’application, tandis que les étudiants en MMI ont pris en charge la conception de l’interface utilisateur (UI), l’expérience utilisateur (UX) ainsi que l’aspect visuel global du projet. Cette collaboration a permis de donner naissance à une application à la fois fonctionnelle, agréable à utiliser et esthétiquement réussie.",
+        experience: "Ce projet a été une excellente occasion de travailler sur des compétences techniques et créatives dans un environnement collaboratif, en appliquant des méthodologies agiles et en luttant contre la fatigue.",
+        date: "20 Décembre 2023 - 21 Décembre 2023",
+        link: "https://github.com/Smybu/Marathon-web",
+    };
 
 export default function CompetencesPage() {
     return (
         <section>
-            <h1 className="mb-8 text-2xl font-medium tracking-tight prose">Mes Compétences</h1>
-            <h3 className="mb-8 text-xl font-medium tracking-tight prose">Voici mes compétences sur différents aspects de l'informatique.</h3>
-            <div>
-                {competences.map(({ categorie, elements }, index) => (
-                    <CompetenceBlock key={index} categorie={categorie} elements={elements} />
-                ))}
-            </div>
+            <DetailsCard details={details}/>
         </section>
     );
 }

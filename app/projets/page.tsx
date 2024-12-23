@@ -22,14 +22,18 @@ const projets = [
     },
     {
         titre: "Marathon du Web",
-        description: "La réalisation d'un site web en 48h",
+        description: "La réalisation d'un site web en 36h",
         link: "/projets/marathon",
         langages: ["Laravel", "BDD", "HTML", "CSS"],
     },
 ];
 
-const Projets: React.FC = () => {
-    return <ProjetsList projets={projets} />;
+export default function Projets(){
+    return (
+    <>
+        <h1 className="mb-8 text-2xl font-medium tracking-tight prose">Mes projets</h1>
+        <h2 className="mb-8 text-xl font-medium tracking-tight prose">Voici une liste de projets que j'ai réalisé</h2>
+    <ProjetsList projets={projets}/>
+        </>
+    );
 };
-
-export default Projets;
