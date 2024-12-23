@@ -1,24 +1,35 @@
-import { Navbar } from "@/app/ui/dashboard/nav";
-import Footer from "@/app/ui/dashboard/footer";
+import React from "react";
+import ProjetsList from "@/app/components/ProjetBlock";
 
-export default function Projets() {
-    return (
-        <>
-            <Navbar />
-            <section className="prose prose-neutral dark:prose-invert">
-                <h1>Compétences</h1>
-                <p>
-                    Ici, vous pouvez présenter les compétences que vous possédez.
-                    Par exemple :
-                </p>
-                <ul>
-                    <li>Développement web (HTML, CSS, JavaScript, React)</li>
-                    <li>Gestion de projets (agiles, SCRUM)</li>
-                    <li>Connaissances en base de données (SQL, NoSQL)</li>
-                    {/* Ajoutez d'autres compétences ici */}
-                </ul>
-            </section>
-            <Footer />
-        </>
-    );
-}
+const projets = [
+    {
+        titre: "Site WATIF",
+        description: "Projet en groupe sur 6 semaines de réalisation d'un réseau social",
+        link: "/projets/watif",
+        langages: ["React", "Spring", "MongoDB", "Python"],
+    },
+    {
+        titre: "Stage chez DiagRAMS Technologies",
+        description: "Stage de 10 semaines chez une entreprise de maintenance prédictive",
+        link: "/projets/diagrams",
+        langages: ["React", "Typescript", "SQL"],
+    },
+    {
+        titre: "Application de maintenance prédictive",
+        description: "Projet de BTS consistant aux mesures des vibrations d'un moteur",
+        link: "/projets/vibrations",
+        langages: ["NodeJS", "ESP32", "MQTT"],
+    },
+    {
+        titre: "Marathon du Web",
+        description: "La réalisation d'un site web en 48h",
+        link: "/projets/marathon",
+        langages: ["Laravel", "BDD", "HTML", "CSS"],
+    },
+];
+
+const Projets: React.FC = () => {
+    return <ProjetsList projets={projets} />;
+};
+
+export default Projets;
