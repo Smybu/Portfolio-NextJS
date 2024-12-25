@@ -1,47 +1,23 @@
 import React from "react";
 import CompetenceBlock from "@/app/components/CompetenceBlock";
+import DetailsCard, {Details} from "@/app/components/DetailsBlock";
+import Link from "next/link";
 
-interface Competence {
-    categorie: string;
-    elements: { nom: string; niveau: number }[];
-}
 
-const competences: Competence[] = [
+
+const details: Details =
     {
-        categorie: "Langage",
-        elements: [
-            { nom: "HTML", niveau: 90 },
-            { nom: "PHP", niveau: 80 },
-            { nom: "Javascript", niveau: 80 },
-            { nom: "Typescript", niveau: 80 },
-            { nom: "CSS", niveau: 75 },
-            { nom: "Java", niveau: 75 },
-            { nom: "Python", niveau: 70 },
-            { nom: "C++", niveau: 60 },
-        ],
-    },
-    {
-        categorie: "Framework",
-        elements: [
-            { nom: "Laravel", niveau: 85 },
-            { nom: "NextJS", niveau: 85 },
-            { nom: "Spring", niveau: 80 },
-            { nom: "Flask", niveau: 65 },
-            { nom: "Angular", niveau: 60 },
-        ],
-    },
-];
+        title: "Stage chez DiagRAMS Technologies",
+        presentation: "J’ai effectué un stage de 10 semaines chez DiagRAMS Technologies, une entreprise spécialisée dans la maintenance prédictive. Ce stage m’a permis de m’immerger dans le monde professionnel et de contribuer activement à divers projets, en mettant en pratique mes compétences en développement.",
+        details: "Au cours de ce stage, j’ai mené une gestion complète de projets de machine learning, incluant la création d’une table SQL pour organiser les données, le développement d’un CRUD pour la manipulation de ces données, et la conception d’un affichage frontend pour une expérience utilisateur optimale. J’ai également participé à des missions secondaires, telles que la correction de bugs et l’ajout de fonctionnalités spécifiques comme une popup dédiée à l’affichage des statistiques d’un capteur. Ces missions m’ont permis de mieux comprendre les processus de développement et de répondre efficacement aux besoins des utilisateurs.",
+        experience: "Cette expérience a été particulièrement enrichissante sur le plan professionnel et personnel. J’ai découvert les dynamiques du travail en équipe et approfondi mes compétences en développement full-stack et en gestion de projets techniques. Travailler dans un environnement collaboratif m’a également permis d’apprendre aux côtés d’une équipe accueillante et compétente, avec qui j’ai partagé de précieux moments d’apprentissage et de convivialité. Ce stage a renforcé ma passion pour le développement technologique et m’a donné confiance dans ma capacité à m’adapter et à contribuer dans un cadre professionnel.",
+        date: "15 Avril 2024 - 21 Juin 2024",
+    };
 
-export default function CompetencesPage() {
+export default function Marathon() {
     return (
         <section>
-            <h1 className="mb-8 text-2xl font-medium tracking-tight prose">Mes Compétences</h1>
-            <h3 className="mb-8 text-xl font-medium tracking-tight prose">Voici mes compétences sur différents aspects de l'informatique.</h3>
-            <div>
-                {competences.map(({ categorie, elements }, index) => (
-                    <CompetenceBlock key={index} categorie={categorie} elements={elements} />
-                ))}
-            </div>
+            <DetailsCard details={details}/>
         </section>
     );
 }

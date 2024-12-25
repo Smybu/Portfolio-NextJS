@@ -10,15 +10,9 @@ const projets = [
     },
     {
         titre: "Stage chez DiagRAMS Technologies",
-        description: "Stage de 10 semaines chez une entreprise de maintenance prédictive",
+        description: "Stage de 10 semaines au sein d'une entreprise de maintenance prédictive",
         link: "/projets/diagrams",
         langages: ["React", "Typescript", "SQL"],
-    },
-    {
-        titre: "Application de maintenance prédictive",
-        description: "Projet de BTS consistant aux mesures des vibrations d'un moteur",
-        link: "/projets/vibrations",
-        langages: ["NodeJS", "ESP32", "MQTT"],
     },
     {
         titre: "Marathon du Web",
@@ -26,6 +20,12 @@ const projets = [
         link: "/projets/marathon",
         langages: ["Laravel", "BDD", "HTML", "CSS"],
     },
+    {
+        titre: "Application de maintenance prédictive",
+        description: "Projet de BTS consistant aux mesures des vibrations d'un moteur",
+        link: "/projets/vibrations",
+        langages: ["NodeJS", "ESP32", "MQTT"],
+    }
 ];
 
 export default function Projets(){

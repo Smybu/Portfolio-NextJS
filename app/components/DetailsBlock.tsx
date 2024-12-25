@@ -7,7 +7,6 @@ export interface Details {
     details: string;
     experience: string;
     date: string;
-    link: string | null;
 }
 
 const DetailsCard: React.FC<{ details: Details }> = ({ details }) => {
@@ -34,17 +33,6 @@ const DetailsCard: React.FC<{ details: Details }> = ({ details }) => {
                     <h3 className="text-xl font-semibold text-purple-500 mb-2">Expérience</h3>
                     <p className="prose text-base text-justify">{details.experience}</p>
                 </div>
-
-
-                    {details?.link ?
-                        <div className="mb-6 text-center">
-                            <Link
-                                href={details?.link}
-                                className="bg-purple-500 text-white text-center py-2 px-4 rounded-lg hover:bg-purple-300 transition-all"
-                            >
-                                Lien vers le github
-                            </Link>
-                        </div>: null}
             </div>
         </div>
     );
