@@ -14,7 +14,7 @@ const details: Details =
         date: "9 Janvier 2023 - 13 Juin 2023",
     };
 
-export default function Marathon() {
+export default function Vibrations() {
     return (
         <section>
             <DetailsCard details={details}/>
