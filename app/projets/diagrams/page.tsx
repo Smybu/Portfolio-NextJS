@@ -18,16 +18,6 @@ export default function Diagrams() {
     return (
         <section>
             <DetailsCard details={details}/>
-            <div className="mb-6 text-center">
-                <Link
-                    href={"/Rapport_stage.pdf"}
-                    className="bg-purple-500 text-white text-center py-2 px-4 rounded-lg hover:bg-purple-300 transition-all"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Lien vers le rapport de stage
-                </Link>
-            </div>
         </section>
     );
 }
